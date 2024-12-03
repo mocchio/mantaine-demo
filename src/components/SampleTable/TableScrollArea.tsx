@@ -1,7 +1,13 @@
 import { useState } from 'react';
-import { IconPencil, IconTrash } from '@tabler/icons-react';
+import {
+  IconArrowRight,
+  IconDownload,
+  IconPencil,
+  IconPhoto,
+  IconTrash,
+} from '@tabler/icons-react';
 import cx from 'clsx';
-import { ActionIcon, Group, Modal, ScrollArea, Table, Text } from '@mantine/core';
+import { ActionIcon, Button, Group, Modal, ScrollArea, Table, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './TableScrollArea.module.css';
 
@@ -204,6 +210,21 @@ export function TableScrollArea() {
       <Modal opened={opened} onClose={close} title="Edit">
         {modalBox}
       </Modal>
+      <Group justify="center">
+        <Button leftSection={<IconPhoto size={14} />} variant="default">
+          Gallery
+        </Button>
+
+        <Button rightSection={<IconDownload size={14} />}>Download</Button>
+
+        <Button
+          variant="light"
+          leftSection={<IconPhoto size={14} />}
+          rightSection={<IconArrowRight size={14} />}
+        >
+          Visit gallery
+        </Button>
+      </Group>
     </>
   );
 }
