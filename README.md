@@ -1,5 +1,8 @@
 # Mantine Vite template
 
+## ローカルでの動作確認
+1. `yarn dev`を実行
+
 ## Features
 
 This template comes with the following features:
